@@ -190,7 +190,23 @@ const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
+        
+        // Create success message element
+        const successMessage = document.createElement('div');
+        successMessage.className = 'form-success-message';
+        successMessage.setAttribute('role', 'alert');
+        successMessage.setAttribute('aria-live', 'polite');
+        successMessage.textContent = '¡Gracias por tu mensaje! Te contactaremos pronto.';
+        
+        // Insert message before form
+        contactForm.parentNode.insertBefore(successMessage, contactForm);
+        
+        // Reset form
         contactForm.reset();
+        
+        // Remove message after 5 seconds
+        setTimeout(() => {
+            successMessage.remove();
+        }, 5000);
     });
 }
