@@ -34,7 +34,12 @@ body{
     color: #ffffff;
     padding: 0 10%;
     
-    padding-top: 19%; /* ajusta este valor */
+    /* CAMBIOS AQUÍ: */
+    justify-content: center; /* Lo centra verticalmente de forma perfecta */
+    padding: 0 10% 40px 10%; /* El tercer valor (50px) asegura espacio abajo */
+    
+
+    
 }
 
 .hero-content h1{
