@@ -297,8 +297,20 @@ body{
 .services-grid a{
     color: #ffffff;
     text-decoration: none;
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     padding: 1% 0;
+}
+
+.service-icon{
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    border: solid 1px #012475;
+    /*box-shadow: 0 6px 14px rgba(0, 76, 255, 0.4);*/
 }
 
 .services-grid a:hover{
