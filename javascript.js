@@ -2,10 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
 	const servicesToggle = document.getElementById("servicesToggle");
 	const servicesBar = document.getElementById("servicesBar");
 	const topSidebar = document.getElementById("topSidebar");
+	const boton = document.querySelector('.boton-menu');
+	const navMenu = document.querySelector('.top-sidebar');
 
 	if (!servicesToggle || !servicesBar || !topSidebar) {
 		return;
 	}
+
+	boton.addEventListener('click', () => {
+		boton.classList.toggle('active');
+		navMenu.classList.toggle("is-open");
+
+
+	});
 
 	const closeServicesBar = () => {
 		if (!servicesBar.classList.contains("is-open")) {
