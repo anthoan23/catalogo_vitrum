@@ -1,0 +1,370 @@
+
+.top-sidebar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 19%;
+    box-sizing: border-box;
+    z-index: 10;
+    overflow: visible;
+}
+
+.top-sidebar::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.8);
+    transition: height 0.3s ease;
+    z-index: -1;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo{
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+.main-nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a{
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.nav-item a:hover{
+    color: #ffffff;
+}
+
+.services-arrow{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-left: 6px;
+    transform: translateY(-1px) rotate(90deg);
+    transition: transform 0.2s ease;
+}
+
+#servicesToggle[aria-expanded="true"] .services-arrow{
+    transform: translateY(-1px) rotate(0deg);
+}
+
+.ai-button{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding: 3px 12px 3px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    color: #666666;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+.ai-button--ghost{
+    margin-top: 18px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 24px;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+}
+
+.ai-button--ghost:hover{
+    transform: scale(1.04);
+    border-color: #004cff;
+    color: #004cff;
+}
+
+.ai-button:focus{
+    outline: 2px solid rgba(42, 107, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.ai-badge{
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #004cff;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.ai-text{
+    color: #808080;
+    font-weight: 500;
+}
+
+.secondary-sidebar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.25s ease, opacity 0.2s ease, visibility 0.2s ease;
+    z-index: -1;
+}
+
+.secondary-sidebar.is-open{
+    transform: scaleY(1);
+    opacity: 1;
+    visibility: visible;
+    z-index: 9;
+}
+
+
+.services-grid{
+    list-style: none;
+    margin: 0;
+    padding: 1.5% 19%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2% 2%;
+    box-sizing: border-box;
+}
+
+.services-grid a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1% 20px 0 20px;
+    transform-origin: left center;
+    transition: transform 0.2s ease, color 0.2s ease;
+    
+}
+
+.services-grid a:hover{
+    color: #e6e6e6;
+    transform: scale(1.03);
+}
+
+.services-grid a span{
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.services-grid a:hover span{
+    transform: scale(1.05);
+}
+
+.services-grid a:hover .service-icon{
+    transform: scale(1.08);
+    box-shadow: 0 0 14px rgba(0, 76, 255, 0.65);
+}
+
+.service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+    flex: 0 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-grid a:hover .service-icon{
+    transform: scale(1.08);
+    box-shadow: 0 0 14px rgba(0, 76, 255, 0.65);
+}
+
+.top-sidebar:hover::before,
+.top-sidebar.is-open::before{
+    height: 100%;
+}
+
+#servicesToggle[aria-expanded="true"] .services-arrow{
+    transform: translateY(-1px) rotate(0deg);
+}
+
+.boton-menu{
+    display: none;
+}
+
+
+@media (max-width: 1100px){
+
+    .top-sidebar{
+
+        padding: 20px 13%;
+     
+    }  
+   
+}
+
+@media (max-width: 900px){
+
+    .top-sidebar{
+
+        padding: 20px 6%;
+     
+    }
+
+    .services-grid{
+      
+        padding: 1.5% 10%;
+       
+    }
+   
+}
+
+@media (max-width: 700px){
+    .top-sidebar{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+
+    }
+
+    .brand-logo{
+        height: 38px;
+        margin-top: -90%;
+    }
+
+    .main-nav{
+        margin-left: -95px;
+        margin-top: 20%;
+    }
+
+    .nav-list{
+        
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 12px;
+      
+        position: static;
+    }
+
+    .top-sidebar::before{
+      display: none;
+    } 
+
+ /*    .nav-item{
+        display: none;
+    }
+
+    .nav-item--ai{
+        display: none;
+    }
+ */
+    .ai-button{
+        padding: 2px 10px 2px 6px;
+        font-size: 13px;
+    }
+
+    .submenu{
+        position: static;
+        border: none;
+        padding: 6px 0 0;
+        display: block;
+    }
+
+    
+
+    .services-grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 12px;
+        padding: 12px 6%;
+    }
+
+
+       
+
+
+    .boton-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 22px; /* Ajustado para un mejor aspecto */
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+        margin-top: -30%;
+
+    }
+
+    .boton-menu span {
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: center; /* Centro de rotación */
+    }
+
+    /* --- ESTADO ACTIVO (La X) --- */
+
+    /* La primera línea baja y gira 45 grados */
+    .boton-menu.active .lina1 {
+        transform: translateY(9.5px) rotate(45deg);
+    }
+
+    /* La línea del medio desaparece */
+    .boton-menu.active .lina2 {
+        opacity: 0;
+        transform: translateX(-10px); /* Efecto de salida lateral */
+    }
+
+    /* La tercera línea sube y gira -45 grados */
+    .boton-menu.active .lina3 {
+        transform: translateY(-9.5px) rotate(-45deg);
+    }
+
+   
+
+ 
+}
