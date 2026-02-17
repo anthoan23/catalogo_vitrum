@@ -89,7 +89,7 @@
      font-style: italic;
 }
 
-.ai-button{
+.ai-button2{
     display: inline-flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -169,12 +169,27 @@
 
     .hero-content{
         padding: 0 1%; /* menos recorte */
-        padding-top: 55%;
+        padding-top: 20%;
+        
     }
 
     .hero-content h1{
  
-        width: 90%;       
+        width: 96%;       
       
     }
+
+    .hero-content h3{
+        width: 92%;
+    }
+
+    .video-hero .ai-button--ghost{
+        font-size: 18px;
+        padding: 11px 27px;
+    }
+
+ 
+
+
+  
 }
