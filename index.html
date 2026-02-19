@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="sytle/inicio1.css">
     <link rel="stylesheet" href="sytle/sidebar.css">
     <link rel="stylesheet" href="sytle/mostrador.css">
+    <link rel="stylesheet" href="sytle/cinta.css">
+    <link rel="stylesheet" href="sytle/preguntas.css">
     <link rel="icon" href="assets/logo1.png" type="image/png">
     <script src="js/sidebar.js" defer></script>
+    <script src="js/preguntas.js" defer></script>
     
 </head>
 <body>
@@ -42,6 +45,27 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('mostrador-container').innerHTML = data;
+            });
+    </script>
+
+    <div id="cinta-container"></div>
+    <script>
+        fetch('modules/cinta.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cinta-container').innerHTML = data;
+            });
+    </script>
+
+    <div id="preguntas-container"></div>
+    <script>
+        fetch('modules/preguntas.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('preguntas-container').innerHTML = data;
+                if (window.initPreguntas) {
+                    window.initPreguntas();
+                }
             });
     </script>
 
