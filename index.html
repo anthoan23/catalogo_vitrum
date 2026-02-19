@@ -7,10 +7,12 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="sytle/inicio.css">
     <link rel="stylesheet" href="sytle/inicio1.css">
+    <link rel="stylesheet" href="sytle/inicio2.css">
     <link rel="stylesheet" href="sytle/sidebar.css">
     <link rel="stylesheet" href="sytle/mostrador.css">
     <link rel="icon" href="assets/logo1.png" type="image/png">
     <script src="js/sidebar.js" defer></script>
+    <script src="js/inicio.js" defer></script>
     
 </head>
 <body>
@@ -33,6 +35,9 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('inicio1-container').innerHTML = data;
+                if (window.initScrollReveal) {
+                    window.initScrollReveal(document.getElementById('inicio1-container'));
+                }
             });
     </script>
 
@@ -42,8 +47,24 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('mostrador-container').innerHTML = data;
+                if (window.initScrollReveal) {
+                    window.initScrollReveal(document.getElementById('mostrador-container'));
+                }
             });
     </script>
+
+    <div id="inicio2-container"></div>
+    <script>
+        fetch('modules/inicio2.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('inicio2-container').innerHTML = data;
+                if (window.initScrollReveal) {
+                    window.initScrollReveal(document.getElementById('inicio2-container'));
+                }
+            });
+    </script>
+    
 
     <h1 style="margin-top: 1000px; color: brown;">holaaaaaaaaaaa</h1>
 </body>
