@@ -12,8 +12,12 @@
     <link rel="stylesheet" href="sytle/mostrador.css">
     <link rel="stylesheet" href="sytle/cinta.css">
     <link rel="stylesheet" href="sytle/preguntas.css">
+    <link rel="stylesheet" href="sytle/contac.css">
+    <link rel="stylesheet" href="sytle/footer.css">
     <link rel="icon" href="assets/logo1.png" type="image/png">
+    <script src="js/inicio.js" defer></script>
     <script src="js/sidebar.js" defer></script>
+    <script src="js/preguntas.js" defer></script>
     
 </head>
 <body>
@@ -66,7 +70,48 @@
             });
     </script>
 
-    <h1 style="margin-top: 1000px; color: brown;">holaaaaaaaaaaa</h1>
+            <div id="cinta-container"></div>
+    <script>
+        fetch('modules/cinta.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cinta-container').innerHTML = data;
+            });
+    </script>
+
+    <div id="preguntas-container"></div>
+    <script>
+        fetch('modules/preguntas.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('preguntas-container').innerHTML = data;
+                if (window.initPreguntas) {
+                    window.initPreguntas();
+                }
+            });
+    </script>
+    <div id="contac-container"></div>
+    <script>
+        fetch('modules/contac.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('contac-container').innerHTML = data;
+                if (window.initScrollReveal) {
+                    window.initScrollReveal(document.getElementById('contac-container'));
+                }
+            });
+    </script>
+
+   <div id="footer-container"></div>
+   <script>
+        fetch('modules/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+   
 </body>
  
 </html>
