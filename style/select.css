@@ -1,0 +1,260 @@
+.select-content {
+	width: min(1100px, 92vw);
+	margin: 110px auto 80px;
+	position: relative;
+	z-index: 1;
+	color: #f5f5f5;
+}
+
+.select-title {
+	font-size: clamp(1.6rem, 2vw + 1rem, 2.6rem);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	margin: 0 0 12px;
+	text-transform: uppercase;
+}
+
+.select-subtitle {
+	margin: 0;
+	font-size: 1rem;
+	width: 50%;
+	line-height: 1.5;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.select-line {
+	height: 2px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.75);
+	margin: 12px 0 60px;
+}
+
+.breadcrumb-wrap {
+	display: inline-block;
+	margin: 0 0 22px;
+}
+
+.breadcrumb {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: rgba(255, 255, 255, 0.82);
+	font-size: 0.95rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.breadcrumb-text {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.breadcrumb-home {
+	color: inherit;
+	text-decoration: none;
+}
+
+.breadcrumb-home:hover {
+	text-decoration: underline;
+}
+
+.breadcrumb-arrow {
+	width: 16px;
+	height: 16px;
+	transform: rotate(-90deg);
+	opacity: 0.85;
+}
+
+.breadcrumb-line {
+	height: 2px;
+	background: rgba(255, 255, 255, 0.85);
+	width: 100%;
+	margin-top: 10px;
+}
+
+.cards-grid {
+	display: grid;
+	gap: 22px;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.service-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	text-decoration: none;
+	background: rgba(10, 10, 10, 0.72);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-image {
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+}
+
+.card-body {
+	padding: 18px 18px 22px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.card-title {
+	font-size: 1.1rem;
+	margin: 0 0 8px;
+	color: #ffffff;
+}
+
+.card-desc {
+	margin: 0;
+	margin-bottom: 15px;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	color: rgba(255, 255, 255, 0.72);
+}
+
+.card-color-badge {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 10px;
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(6px);
+}
+
+.card-color-label {
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	color: rgba(255, 255, 255, 0.85);
+}
+
+.card-color-list {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.card-color-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset;
+}
+
+.color-blanco {
+	background: #f2f2f2;
+	border-color: rgba(0, 0, 0, 0.25);
+}
+
+.color-gris {
+	background: #9b9b9b;
+}
+
+.color-negro {
+	background: #202020;
+}
+
+.color-amarillo {
+	background: #f2c94c;
+}
+
+.color-azul {
+	background: #2f80ed;
+}
+
+.card-materials {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	margin-bottom: 16px;
+}
+
+.card-materials-title {
+	font-size: 0.78rem;
+	
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.card-materials-value {
+	font-size: 0.95rem;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.card-materials-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.card-materials-item {
+	background: rgba(255, 255, 255, 0.16);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 999px;
+	padding: 6px 10px;
+	font-size: 0.85rem;
+	color: rgba(255, 255, 255, 0.95);
+}
+
+.card-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 45%;
+	gap: 8px;
+	margin-top: auto;
+	padding: 10px 16px;
+	border-radius: 999px;
+	font-size: 0.9rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	color: #ffffff;
+}
+
+.card-button::after {
+	content: "";
+	width: 20px;
+	height: 20px;
+	background: url("/catalogo_vitrum/assets/flecha-izquierda.png") center / contain no-repeat;
+	transform: rotate(135deg);
+}
+
+@media (max-width: 700px) {
+	.select-content {
+		margin-top: 96px;
+	}
+
+	.select-subtitle {
+
+		width: 80%;
+		
+	}
+
+	.breadcrumb {
+		font-size: 0.85rem;
+	}
+
+	.card-image {
+		height: 140px;
+	}
+}
