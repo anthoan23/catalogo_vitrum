@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vitrum_gc</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="../style/inicio.css">
+    <link rel="stylesheet" href="../style/sidebar.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/select.css">
+    <link rel="icon" href="../assets/logo1.png" type="image/png">
+    <script src="../js/inicio.js" defer></script>
+    <script src="../js/sidebar.js" defer></script>
+     <script src="../js/select.js" defer></script>
+</head>
+<body>
+    <img src="../assets/fondo.png" class="fondo-img">
+    <div id="sidebar-container"></div>
+    <main class="select-content" aria-live="polite">
+        <div class="breadcrumb-wrap">
+            <nav class="breadcrumb" aria-label="Migas de pan">
+                <span class="breadcrumb-text">
+                    <a class="breadcrumb-home" href="/catalogo_vitrum/index.html">Inicio</a>
+                    <img class="breadcrumb-arrow" src="/catalogo_vitrum/assets/f-abajo.png" alt="" aria-hidden="true">
+                    <span id="breadcrumb-current">Servicio</span>
+                </span>
+            </nav>
+            <div class="breadcrumb-line" aria-hidden="true"></div>
+        </div>
+        <h1 class="select-title" id="servicio-title">Selecciona un servicio</h1>
+        <p class="select-subtitle" id="servicio-subtitle"></p>
+        <div class="select-line" aria-hidden="true"></div>
+        <div class="cards-grid" id="cards-container"></div>
+    </main>
+   
+    <script>
+        fetch('../comunes/sidebar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sidebar-container').innerHTML = data;
+                if (window.initSidebar) {
+                    window.initSidebar();
+                }
+            });
+    </script>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('../modules/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+
+      
+</body>
+</html>

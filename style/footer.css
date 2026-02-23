@@ -1,0 +1,103 @@
+.footer{
+    width: 100%;
+    padding: 10px 0 28px;
+    margin-top: -20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-glow{
+    height: 3px;
+    width: min(1100px, 90%);
+    margin: 0 auto 24px;
+    background: linear-gradient(90deg, rgba(0, 76, 255, 0), rgba(96, 153, 255, 0.95), rgba(0, 76, 255, 0));
+    box-shadow: 0 0 16px rgba(96, 153, 255, 0.6);
+}
+
+.footer-content{
+    width: min(1100px, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.footer-content h2{
+    margin: 0;
+    font-size: clamp(16px, 2vw, 22px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #9ec1ff;
+}
+
+.footer-nav{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+    gap: 10px 28px;
+    justify-items: start;
+}
+
+.footer-nav a{
+    text-align: left;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: clamp(12px, 1.4vw, 15px);
+    letter-spacing: 0.4px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-nav a:hover{
+    color: #9ec1ff;
+    text-shadow: 0 0 10px rgba(96, 153, 255, 0.7);
+}
+
+.footer-owner,
+.footer-copy{
+    margin: 0;
+    font-size: clamp(12px, 1.2vw, 14px);
+    opacity: 0.85;
+}
+
+.footer-owner{
+    font-weight: 600;
+}
+
+.footer-owner a{
+    color: #9ec1ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.footer-owner a:hover{
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(96, 153, 255, 0.8);
+}
+
+@media (max-width: 700px){
+    .footer{
+        padding: 28px 0 36px;
+    }
+
+    .footer-glow{
+        margin-bottom: 18px;
+    }
+
+    .footer-nav{
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        width: min(270px, 100%);
+        justify-items: start;
+        gap: 10px 20px;
+    }
+
+    .footer-nav a{
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .footer-nav a:nth-child(odd){
+        margin-left: 24px;
+    }
+}

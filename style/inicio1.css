@@ -1,0 +1,195 @@
+.video-hero{
+    
+    width: 100%;
+    height: 90vh;
+    min-height: 320px;
+    overflow: hidden;
+    background: #000000;
+}
+
+.video-hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 20%, rgba(0, 0, 0, 0) 80%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.video-bg,
+.video-fallback{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-bg{
+    z-index: 0;
+}
+
+.video-fallback{
+    opacity: 1;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.hero-content{
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 10%;
+    
+    /* CAMBIOS AQUÍ: */
+    justify-content: center; /* Lo centra verticalmente de forma perfecta */
+    padding: 0 10% 40px 10%; /* El tercer valor (50px) asegura espacio abajo */
+    
+
+    
+}
+.video-hero.is-ready .video-fallback{
+    opacity: 0;
+}
+
+.hero-content h1{
+    margin: 0 0 16px;
+    font-size: clamp(28px, 4vw, 60px);
+    line-height: 1.1;
+    letter-spacing: 1px;
+    width: 80%;
+    max-width: 850px;;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.95);
+    
+}
+
+.hero-content h1 .highlight-blue{
+    color: #004cff;
+     font-style: italic;
+}
+
+.hero-content h3{
+    margin: 0;
+    font-size: clamp(13px, 2vw, 16px);
+    font-weight: 540;
+    line-height: 1.5;
+    width: 60%;
+    max-width: 700px;
+   
+}
+
+.hero-content h1 .highlight-blue{
+    color: #004cff;
+     font-style: italic;
+}
+
+.ai-button2{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding: 3px 12px 3px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+    color: #666666;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+}
+
+.ai-button--ghost{
+    margin-top: 18px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 10px 24px;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.35);
+}
+
+.ai-button--ghost:hover{
+    transform: scale(1.04);
+    border-color: #004cff;
+    color: #004cff;
+}
+
+.ai-button:focus{
+    outline: 2px solid rgba(42, 107, 255, 0.5);
+    outline-offset: 2px;
+}
+
+.scroll-indicator{
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    z-index: 4;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.scroll-icon{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    animation: scroll-bounce 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce{
+    0%{
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    50%{
+        transform: translateY(8px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 700px){
+
+    .hero-content{
+        padding: 0 1%; /* menos recorte */
+        padding-top: 20%;
+        
+    }
+
+    .hero-content h1{
+ 
+        width: 96%;       
+      
+    }
+
+    .hero-content h3{
+        width: 92%;
+    }
+
+    .video-hero .ai-button--ghost{
+        font-size: 18px;
+        padding: 11px 27px;
+    }
+
+ 
+
+
+  
+}
