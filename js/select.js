@@ -13,29 +13,33 @@ const serviceData = {
 	ventanas: {
 		title: "Ventanas",
 		subtitle: "Soluciones en vidrio y aluminio para iluminar, proteger y mejorar cada espacio con estilo moderno y alta durabilidad.",
-		image: "/catalogo_vitrum/assets/sidebar/ventana-inc.jpg",
+		image: "/catalogo_vitrum/assets/select/caroni/caroni-1.mov",
 		items: [
 			{
 				name: "Caroni",
 				description: "Lineas modernas con alta resistencia y buen aislamiento.",
+				image: "/catalogo_vitrum/assets/select/caroni/caroni-1.jpeg",
 				materials: ["Aluminio"],
 				colors: ["Blanco", "Gris", "Negro"],
 			},
 			{
 				name: "Ecobel",
 				description: "Perfileria ligera ideal para espacios contemporaneos.",
+				image: "/catalogo_vitrum/assets/select/ecobel/ecobel.jpg",
 				materials: ["Aluminio"],
 				colors: ["Blanco", "Gris", "Negro"],
 			},
 			{
 				name: "Belglass",
 				description: "Acabados elegantes para proyectos residenciales y comerciales.",
+				image: "/catalogo_vitrum/assets/select/belglass/belglass.jpg",
 				materials: ["Aluminio"],
 				colors: ["Blanco", "Gris", "Negro"],
 			},
 			{
 				name: "Panoramica",
 				description: "Maxima visibilidad y entrada de luz natural.",
+				image: "/catalogo_vitrum/assets/select/panoramica/panoramica1.jpg",
 				materials: ["Aluminio"],
 				colors: ["Blanco", "Gris", "Negro"],
 			}
@@ -49,18 +53,21 @@ const serviceData = {
 			{
 				name: "Corredizas",
 				description: "Apertura suave y ahorro de espacio para grandes claros.",
+				image: "/catalogo_vitrum/assets/select/corredizas-a/1f1f3d8d-2557-406d-bb9e-fc1202ce4ab5.jpeg",
 				materials: ["Acero inoxidable", "Aluminio"],
 				colors: ["Gris", "Negro", "Blanco"],
 			},
 			{
 				name: "Bancarias",
 				description: "Paneles robustos con enfoque en seguridad y durabilidad.",
+				image: "/catalogo_vitrum/assets/select/corrediza-sin-marco/0f1f679e-1901-48be-9d6e-133b86b5a5d6.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Acordion",
 				description: "Solucion flexible para dividir o integrar ambientes.",
+				image: "/catalogo_vitrum/assets/img/2d1318e5-f43a-424e-9aab-f6c8d44440c4.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			}
@@ -74,12 +81,14 @@ const serviceData = {
 			{
 				name: "Escalera",
 				description: "Barandas seguras con diseno limpio para interiores.",
+				image: "/catalogo_vitrum/assets/img/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Terraza",
 				description: "Proteccion exterior con vista despejada.",
+				image: "/catalogo_vitrum/assets/img/38ca5eb9-2366-4967-9e81-bd3ec85018b6.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Negro"],
 			}
@@ -93,24 +102,28 @@ const serviceData = {
 			{
 				name: "Spider",
 				description: "Herrajes puntuales para un look minimalista.",
+				image: "/catalogo_vitrum/assets/img/471bf718-35c1-4356-a297-7fc06ea5f3f8.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Batiente",
 				description: "Apertura tradicional con cierre firme y comodo.",
+				image: "/catalogo_vitrum/assets/img/4ea5151f-2272-457e-a487-32e601ed8c82.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Corrediza",
 				description: "Ahorro de espacio con desplazamiento suave.",
+				image: "/catalogo_vitrum/assets/img/54ef6d53-b223-41a5-bea9-a2eb933c75c3.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro", "Blanco"],
 			},
 			{
 				name: "Acordion",
 				description: "Paneles plegables para duchas compactas.",
+				image: "/catalogo_vitrum/assets/img/611fdc7b-fdea-45be-b42d-0d1df7ea6ba5.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			}
@@ -124,18 +137,21 @@ const serviceData = {
 			{
 				name: "Vitrinas",
 				description: "Exhibicion clara para destacar tus productos.",
+				image: "/catalogo_vitrum/assets/img/6b1441db-5c17-4085-9c45-e61ce6115fdc.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Blanco", "Negro"],
 			},
 			{
 				name: "Mostradores",
 				description: "Superficies resistentes para atencion al cliente.",
+				image: "/catalogo_vitrum/assets/mostrador/M-1.jpg",
 				materials: ["Acero"],
 				colors: ["Gris", "Blanco", "Negro"],
 			},
 			{
 				name: "Fachadas comerciales",
 				description: "Impacto visual con vidrio y estructuras modernas.",
+				image: "/catalogo_vitrum/assets/img/79ba6980-8441-46d3-a813-e36e239b7570.jpeg",
 				materials: ["Acero", "Aluminio"],
 				colors: ["Gris", "Blanco", "Negro"],
 			}
@@ -149,6 +165,7 @@ const serviceData = {
 			{
 				name: "Espejos",
 				description: "Disenos personalizados para hogar o comercio.",
+				image: "/catalogo_vitrum/assets/img/79cbd6a4-30f6-4790-8f03-d0e101698713.jpeg",
 				materials: ["LED Flexisbles"],
 				colors: ["Amarillo", "Blanco", "Azul"],
 			}
@@ -205,6 +222,7 @@ const buildCards = (serviceKey) => {
 	cardsContainer.innerHTML = data.items
 		.map((item) => {
 			const infoUrl = `/catalogo_vitrum/modules/inf.html?item=${encodeURIComponent(item.name)}`;
+			const cardImage = item.image || data.image;
 			const materials = Array.isArray(item.materials)
 				? item.materials
 				: [item.materials];
@@ -235,7 +253,7 @@ const buildCards = (serviceKey) => {
 			return `
 				<a class="service-card" href="${infoUrl}" aria-label="${data.title} - ${item.name}">
 					${colorsBadge}
-					<img class="card-image" src="${data.image}" alt="" aria-hidden="true">
+					<img class="card-image" src="${cardImage}" alt="" aria-hidden="true">
 					<div class="card-body">
 						<h3 class="card-title">${item.name}</h3>
 						<p class="card-desc">${item.description}</p>
