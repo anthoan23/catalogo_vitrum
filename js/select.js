@@ -113,13 +113,7 @@ const serviceData = {
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
-			{
-				name: "Corrediza",
-				description: "Ahorro de espacio con desplazamiento suave.",
-				image: "/catalogo_vitrum/assets/img/54ef6d53-b223-41a5-bea9-a2eb933c75c3.jpeg",
-				materials: ["Acero inoxidable"],
-				colors: ["Gris", "Negro", "Blanco"],
-			},
+			
 			{
 				name: "Acordion",
 				description: "Paneles plegables para duchas compactas.",
@@ -146,13 +140,6 @@ const serviceData = {
 				description: "Superficies resistentes para atencion al cliente.",
 				image: "/catalogo_vitrum/assets/mostrador/M-1.jpg",
 				materials: ["Acero"],
-				colors: ["Gris", "Blanco", "Negro"],
-			},
-			{
-				name: "Fachadas comerciales",
-				description: "Impacto visual con vidrio y estructuras modernas.",
-				image: "/catalogo_vitrum/assets/img/79ba6980-8441-46d3-a813-e36e239b7570.jpeg",
-				materials: ["Acero", "Aluminio"],
 				colors: ["Gris", "Blanco", "Negro"],
 			}
 		]
