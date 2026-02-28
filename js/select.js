@@ -53,21 +53,21 @@ const serviceData = {
 			{
 				name: "Corredizas",
 				description: "Apertura suave y ahorro de espacio para grandes claros.",
-				image: "/catalogo_vitrum/assets/select/corredizas-a/1f1f3d8d-2557-406d-bb9e-fc1202ce4ab5.jpeg",
+				image: "/catalogo_vitrum/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
 				materials: ["Acero inoxidable", "Aluminio"],
 				colors: ["Gris", "Negro", "Blanco"],
 			},
 			{
 				name: "Bancarias",
 				description: "Paneles robustos con enfoque en seguridad y durabilidad.",
-				image: "/catalogo_vitrum/assets/select/corrediza-sin-marco/0f1f679e-1901-48be-9d6e-133b86b5a5d6.jpeg",
+				image: "/catalogo_vitrum/assets/select/bancarias/bancaria2.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Acordion",
 				description: "Solucion flexible para dividir o integrar ambientes.",
-				image: "/catalogo_vitrum/assets/img/2d1318e5-f43a-424e-9aab-f6c8d44440c4.jpeg",
+				image: "/catalogo_vitrum/assets/select/acordion-a/acordion1.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			}
@@ -81,14 +81,14 @@ const serviceData = {
 			{
 				name: "Escalera",
 				description: "Barandas seguras con diseno limpio para interiores.",
-				image: "/catalogo_vitrum/assets/img/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
+				image: "/catalogo_vitrum/assets/select/escalera/escalera.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Terraza",
 				description: "Proteccion exterior con vista despejada.",
-				image: "/catalogo_vitrum/assets/img/38ca5eb9-2366-4967-9e81-bd3ec85018b6.jpeg",
+				image: "/catalogo_vitrum/assets/select/terraza/terraza1.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Negro"],
 			}
@@ -102,14 +102,14 @@ const serviceData = {
 			{
 				name: "Spider",
 				description: "Herrajes puntuales para un look minimalista.",
-				image: "/catalogo_vitrum/assets/img/471bf718-35c1-4356-a297-7fc06ea5f3f8.jpeg",
+				image: "/catalogo_vitrum/assets/select/spider/spider2.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Batiente",
 				description: "Apertura tradicional con cierre firme y comodo.",
-				image: "/catalogo_vitrum/assets/img/4ea5151f-2272-457e-a487-32e601ed8c82.jpeg",
+				image: "/catalogo_vitrum/assets/select/batiente/batiente.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
@@ -117,7 +117,7 @@ const serviceData = {
 			{
 				name: "Acordion",
 				description: "Paneles plegables para duchas compactas.",
-				image: "/catalogo_vitrum/assets/img/611fdc7b-fdea-45be-b42d-0d1df7ea6ba5.jpeg",
+				image: "/catalogo_vitrum/assets/select/acordion-b/acordion1.jpeg",
 				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			}
@@ -131,14 +131,14 @@ const serviceData = {
 			{
 				name: "Vitrinas",
 				description: "Exhibicion clara para destacar tus productos.",
-				image: "/catalogo_vitrum/assets/img/6b1441db-5c17-4085-9c45-e61ce6115fdc.jpeg",
+				image: "/catalogo_vitrum/assets/select/vitrinas/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Blanco", "Negro"],
 			},
 			{
 				name: "Mostradores",
 				description: "Superficies resistentes para atencion al cliente.",
-				image: "/catalogo_vitrum/assets/mostrador/M-1.jpg",
+				image: "/catalogo_vitrum/assets/select/mostradores/mostrador.jpeg",
 				materials: ["Acero"],
 				colors: ["Gris", "Blanco", "Negro"],
 			}
@@ -152,9 +152,16 @@ const serviceData = {
 			{
 				name: "Espejos",
 				description: "Disenos personalizados para hogar o comercio.",
-				image: "/catalogo_vitrum/assets/img/79cbd6a4-30f6-4790-8f03-d0e101698713.jpeg",
+				image: "/catalogo_vitrum/assets/select/espejos/espejo1.jpeg",
 				materials: ["LED Flexisbles"],
 				colors: ["Amarillo", "Blanco", "Azul"],
+			},
+			{
+				name: "Puertas de celosia",
+				description: "Puertas decorativas que combinan privacidad y estilo con disenos de celosia.",
+				image: "/catalogo_vitrum/assets/select/puertas-celosia/6b1441db-5c17-4085-9c45-e61ce6115fdc.jpeg",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Negro"],
 			}
 		]
 	}
