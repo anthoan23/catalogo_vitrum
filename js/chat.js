@@ -8,10 +8,10 @@
 		const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
 
 		if (isLocalHost) {
-			return "http://localhost:8888/.netlify/functions/procesar";
+			return "http://localhost:8888/api/procesar";
 		}
 
-		return "/.netlify/functions/procesar";
+		return "/api/procesar";
 	}
 
 	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
@@ -50,7 +50,7 @@
 
 		if (!response.ok) {
 			if (response.status === 404) {
-				throw new Error("No se encontró la función del chat (404). Ejecuta Netlify en local con 'netlify dev' o despliega el sitio en Netlify.");
+				throw new Error("No se encontró la función del chat (404) en " + FUNCTION_ENDPOINT + ". Revisa que Netlify haya publicado la función 'procesar'.");
 			}
 			throw new Error(data.error || "No se pudo obtener respuesta del asistente.");
 		}

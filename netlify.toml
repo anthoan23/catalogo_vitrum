@@ -4,3 +4,8 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/procesar"
+  to = "/.netlify/functions/procesar"
+  status = 200
