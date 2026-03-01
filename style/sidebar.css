@@ -89,12 +89,18 @@
     gap: 10px;
     padding: 3px 12px 3px 8px;
     border-radius: 999px;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    background: #ffffff;
-    color: #666666;
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    background: rgba(106, 110, 121, 0.44);
+    color: #f3f4f7;
     font-size: 14px;
     letter-spacing: 0.2px;
     cursor: pointer;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.ai-button:hover{
+    background: rgba(106, 110, 121, 0.52);
 }
 
 
@@ -114,7 +120,7 @@
 }
 
 .ai-text{
-    color: #808080;
+    color: rgba(233, 234, 238, 0.9);
     font-weight: 500;
 }
 
