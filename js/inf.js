@@ -59,84 +59,84 @@ const findServiceByItem = (itemName, preferredServiceKey) => {
 
 const galleryByServiceItem = {
 	"ventanas|caroni": [
-		"/catalogo_vitrum/assets/select/caroni/82630d15-b5c3-4aec-9e1f-92232ba743fa.jpeg",
-		"/catalogo_vitrum/assets/select/caroni/caroni-2.jpeg",
-		"/catalogo_vitrum/assets/select/caroni/caroni-1.jpeg",
+		"/assets/select/caroni/82630d15-b5c3-4aec-9e1f-92232ba743fa.jpeg",
+		"/assets/select/caroni/caroni-2.jpeg",
+		"/assets/select/caroni/caroni-1.jpeg",
 	],
 	"ventanas|ecobel": [
-		"/catalogo_vitrum/assets/select/ecobel/ecobel-1.jpg",
-		"/catalogo_vitrum/assets/select/ecobel/ecobel3.jpg",
-		"/catalogo_vitrum/assets/select/ecobel/ecobel2.jpg",
+		"/assets/select/ecobel/ecobel-1.jpg",
+		"/assets/select/ecobel/ecobel3.jpg",
+		"/assets/select/ecobel/ecobel2.jpg",
 	],
 	"ventanas|belglass": [
-		"/catalogo_vitrum/assets/select/belglass/belglass.jpg",
-		"/catalogo_vitrum/assets/select/belglass/des.jpg",
-		"/catalogo_vitrum/assets/select/belglass/download.jpg",
+		"/assets/select/belglass/belglass.jpg",
+		"/assets/select/belglass/des.jpg",
+		"/assets/select/belglass/download.jpg",
 	],
 	"ventanas|panoramica": [
-		"/catalogo_vitrum/assets/select/panoramica/panoramica1.jpg",
-		"/catalogo_vitrum/assets/select/panoramica/panoramica2.jpg",
-		"/catalogo_vitrum/assets/select/panoramica/Lateral-2-Canales-A2949-1000x1000.jpg",
+		"/assets/select/panoramica/panoramica1.jpg",
+		"/assets/select/panoramica/panoramica2.jpg",
+		"/assets/select/panoramica/Lateral-2-Canales-A2949-1000x1000.jpg",
 	],
 	"cierre-ambiente|corredizas": [
-		"/catalogo_vitrum/assets/select/corredizas-a/dfa5bae3-d986-4313-b259-858672a67525.jpeg",
-		"/catalogo_vitrum/assets/select/corredizas-a/2f3fbdf1-bd11-43c1-b6c3-e25f86a0e4b5.jpeg",
-		"/catalogo_vitrum/assets/select/corredizas-a/e02d93a8-9f5a-4048-acce-725463576035.jpeg",
+		"/assets/select/corredizas-a/dfa5bae3-d986-4313-b259-858672a67525.jpeg",
+		"/assets/select/corredizas-a/2f3fbdf1-bd11-43c1-b6c3-e25f86a0e4b5.jpeg",
+		"/assets/select/corredizas-a/e02d93a8-9f5a-4048-acce-725463576035.jpeg",
 	],
 	"cierre-ambiente|bancarias": [
-		"/catalogo_vitrum/assets/select/bancarias/bancaria2.jpeg",
-		"/catalogo_vitrum/assets/select/bancarias/bancaria1.jpeg",
-		"/catalogo_vitrum/assets/select/bancarias/bancaria3.jpg",
+		"/assets/select/bancarias/bancaria2.jpeg",
+		"/assets/select/bancarias/bancaria1.jpeg",
+		"/assets/select/bancarias/bancaria3.jpg",
 	],
 	"cierre-ambiente|acordion": [
-		"/catalogo_vitrum/assets/select/acordion-a/acordion1.jpeg",
-		"/catalogo_vitrum/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM (1).jpeg",
-		"/catalogo_vitrum/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM.jpeg",
+		"/assets/select/acordion-a/acordion1.jpeg",
+		"/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM (1).jpeg",
+		"/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM.jpeg",
 	],
 	"barandas|escalera": [
-		"/catalogo_vitrum/assets/select/escalera/escalera-1.jpeg",
-		"/catalogo_vitrum/assets/select/escalera/79ba6980-8441-46d3-a813-e36e239b7570.jpeg",
-		"/catalogo_vitrum/assets/select/escalera/e82a7234-18ff-40a8-a56d-a9237fba79d8.jpeg",
+		"/assets/select/escalera/escalera-1.jpeg",
+		"/assets/select/escalera/79ba6980-8441-46d3-a813-e36e239b7570.jpeg",
+		"/assets/select/escalera/e82a7234-18ff-40a8-a56d-a9237fba79d8.jpeg",
 	],
 	"barandas|terraza": [
-		"/catalogo_vitrum/assets/select/terraza/terraza1.jpeg",
-		"/catalogo_vitrum/assets/select/terraza/terraza-1.jpeg",
-		"/catalogo_vitrum/assets/select/terraza/611fdc7b-fdea-45be-b42d-0d1df7ea6ba5.jpeg",
+		"/assets/select/terraza/terraza1.jpeg",
+		"/assets/select/terraza/terraza-1.jpeg",
+		"/assets/select/terraza/611fdc7b-fdea-45be-b42d-0d1df7ea6ba5.jpeg",
 	],
 	"puertas-bano|spider": [
-		"/catalogo_vitrum/assets/select/spider/4b237c94-9368-46f7-900e-1fab0a9aeae9.jpeg",
-		"/catalogo_vitrum/assets/select/spider/spider3.jpeg",
-		"/catalogo_vitrum/assets/select/spider/spider.jpeg",
+		"/assets/select/spider/4b237c94-9368-46f7-900e-1fab0a9aeae9.jpeg",
+		"/assets/select/spider/spider3.jpeg",
+		"/assets/select/spider/spider.jpeg",
 	],
 	"puertas-bano|batiente": [
-		"/catalogo_vitrum/assets/select/batiente/batiente.jpeg",
-		"/catalogo_vitrum/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.23 PM (1).jpeg",
-		"/catalogo_vitrum/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.24 PM.jpeg",
+		"/assets/select/batiente/batiente.jpeg",
+		"/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.23 PM (1).jpeg",
+		"/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.24 PM.jpeg",
 	],
 	"puertas-bano|acordion": [
-		"/catalogo_vitrum/assets/select/acordion-b/acordion1.jpeg",
-		"/catalogo_vitrum/assets/select/acordion-b/acordion.jpeg",
-		"/catalogo_vitrum/assets/select/acordion-b/acordion1.jpeg",
+		"/assets/select/acordion-b/acordion1.jpeg",
+		"/assets/select/acordion-b/acordion.jpeg",
+		"/assets/select/acordion-b/acordion1.jpeg",
 	],
 	"comercios|vitrinas": [
-		"/catalogo_vitrum/assets/select/vitrinas/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
-		"/catalogo_vitrum/assets/select/vitrinas/4d7cea79-6e4f-4b42-95c9-e1281953a5ce.jpeg",
-		"/catalogo_vitrum/assets/select/vitrinas/WhatsApp Image 2026-02-05 at 2.26.50 PM.jpeg",
+		"/assets/select/vitrinas/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
+		"/assets/select/vitrinas/4d7cea79-6e4f-4b42-95c9-e1281953a5ce.jpeg",
+		"/assets/select/vitrinas/WhatsApp Image 2026-02-05 at 2.26.50 PM.jpeg",
 	],
 	"comercios|mostradores": [
-		"/catalogo_vitrum/assets/select/mostradores/mostrador.jpeg",
-		"/catalogo_vitrum/assets/select/mostradores/c6b50bb7-703c-45e7-a2f4-1214c3bef697.jpeg",
-		"/catalogo_vitrum/assets/select/mostradores/WhatsApp Image 2026-02-05 at 2.20.08 PM.jpeg",
+		"/assets/select/mostradores/mostrador.jpeg",
+		"/assets/select/mostradores/c6b50bb7-703c-45e7-a2f4-1214c3bef697.jpeg",
+		"/assets/select/mostradores/WhatsApp Image 2026-02-05 at 2.20.08 PM.jpeg",
 	],
 	"mas|espejos": [
-		"/catalogo_vitrum/assets/select/espejos/e9cee32c-9c6a-4d8a-805c-5baca69052cf.jpeg",
-		"/catalogo_vitrum/assets/select/espejos/7d753116-b551-4de7-acd8-ef83f563db67.jpeg",
-		"/catalogo_vitrum/assets/select/espejos/espejo.jpeg",
+		"/assets/select/espejos/e9cee32c-9c6a-4d8a-805c-5baca69052cf.jpeg",
+		"/assets/select/espejos/7d753116-b551-4de7-acd8-ef83f563db67.jpeg",
+		"/assets/select/espejos/espejo.jpeg",
 	],
 	"mas|puertas de celosia": [
-		"/catalogo_vitrum/assets/select/puertas-celosia/6b1441db-5c17-4085-9c45-e61ce6115fdc.jpeg",
-		"/catalogo_vitrum/assets/select/puertas-celosia/54ef6d53-b223-41a5-bea9-a2eb933c75c3.jpeg",
-		"/catalogo_vitrum/assets/select/puertas-celosia/79cbd6a4-30f6-4790-8f03-d0e101698713.jpeg",
+		"/assets/select/puertas-celosia/6b1441db-5c17-4085-9c45-e61ce6115fdc.jpeg",
+		"/assets/select/puertas-celosia/54ef6d53-b223-41a5-bea9-a2eb933c75c3.jpeg",
+		"/assets/select/puertas-celosia/79cbd6a4-30f6-4790-8f03-d0e101698713.jpeg",
 	],
 };
 
@@ -304,29 +304,29 @@ const detailByServiceItem = {
 };
 
 const detailImageByServiceItem = {
-	"ventanas|caroni": "/catalogo_vitrum/assets/select/caroni/caroni1.png",
-	"ventanas|ecobel": "/catalogo_vitrum/assets/select/ecobel/ecobel.png",
-	"ventanas|belglass": "/catalogo_vitrum/assets/select/belglass/beglass1.jpg",
-	"ventanas|panoramica": "/catalogo_vitrum/assets/select/panoramica/panoramica2.jpg",
-	"cierre-ambiente|corredizas": "/catalogo_vitrum/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
-	"cierre-ambiente|bancarias": "/catalogo_vitrum/assets/select/bancarias/bancaria3.jpeg",
-	"cierre-ambiente|acordion": "/catalogo_vitrum/assets/select/acordion-a/acordion2.jpeg",
-	"barandas|escalera": "/catalogo_vitrum/assets/select/escalera/escalera-2.jpeg",
-	"barandas|terraza": "/catalogo_vitrum/assets/select/terraza/terraza-2.jpeg",
-	"puertas-bano|spider": "/catalogo_vitrum/assets/select/spider/spider-1.jpeg",
-	"puertas-bano|batiente": "/catalogo_vitrum/assets/select/batiente/batiente-1.jpeg",
-	"puertas-bano|acordion": "/catalogo_vitrum/assets/select/acordion-b/acordion.jpeg",
-	"comercios|vitrinas": "/catalogo_vitrum/assets/select/vitrinas/vitrina.jpeg",
-	"comercios|mostradores": "/catalogo_vitrum/assets/select/mostradores/mostrador.jpeg",
-	"mas|espejos": "/catalogo_vitrum/assets/select/espejos/espejo-1.jpeg",
-	"mas|puertas de celosia": "/catalogo_vitrum/assets/select/puertas-celosia/puerta-1.jpeg",
+	"ventanas|caroni": "/assets/select/caroni/caroni1.png",
+	"ventanas|ecobel": "/assets/select/ecobel/ecobel.png",
+	"ventanas|belglass": "/assets/select/belglass/beglass1.jpg",
+	"ventanas|panoramica": "/assets/select/panoramica/panoramica2.jpg",
+	"cierre-ambiente|corredizas": "/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
+	"cierre-ambiente|bancarias": "/assets/select/bancarias/bancaria3.jpeg",
+	"cierre-ambiente|acordion": "/assets/select/acordion-a/acordion2.jpeg",
+	"barandas|escalera": "/assets/select/escalera/escalera-2.jpeg",
+	"barandas|terraza": "/assets/select/terraza/terraza-2.jpeg",
+	"puertas-bano|spider": "/assets/select/spider/spider-1.jpeg",
+	"puertas-bano|batiente": "/assets/select/batiente/batiente-1.jpeg",
+	"puertas-bano|acordion": "/assets/select/acordion-b/acordion.jpeg",
+	"comercios|vitrinas": "/assets/select/vitrinas/vitrina.jpeg",
+	"comercios|mostradores": "/assets/select/mostradores/mostrador.jpeg",
+	"mas|espejos": "/assets/select/espejos/espejo-1.jpeg",
+	"mas|puertas de celosia": "/assets/select/puertas-celosia/puerta-1.jpeg",
 };
 
 const getGalleryImages = (resolved) => {
 	const fallback = resolved?.item?.image
 		? [resolved.item.image]
 		: [
-			"/catalogo_vitrum/assets/logo1.png",
+			"/assets/logo1.png",
 		];
 
 	if (!resolved?.serviceKey || !resolved?.item?.name) {
@@ -438,7 +438,7 @@ const updateProductDetail = (resolved) => {
 		.join("");
 
 	if (detailImage) {
-		const fallbackImage = resolved?.item?.image || "/catalogo_vitrum/assets/logo1.png";
+		const fallbackImage = resolved?.item?.image || "/assets/logo1.png";
 		detailImage.src = detailImageSrc || fallbackImage;
 		detailImage.alt = `Imagen adicional de ${itemName}`;
 	}
@@ -502,7 +502,7 @@ const updateBreadcrumb = () => {
 		breadcrumbService.textContent = "Servicio";
 		breadcrumbService.setAttribute(
 			"href",
-			"/catalogo_vitrum/modules/select.html"
+			"/modules/select.html"
 		);
 		breadcrumbItem.textContent = rawItem || "Detalle";
 		if (infoTitle) {
@@ -518,7 +518,7 @@ const updateBreadcrumb = () => {
 	breadcrumbService.textContent = resolved.service.title;
 	breadcrumbService.setAttribute(
 		"href",
-		`/catalogo_vitrum/modules/select.html?servicio=${encodeURIComponent(
+		`/modules/select.html?servicio=${encodeURIComponent(
 			resolved.serviceKey
 		)}`
 	);
