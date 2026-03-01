@@ -1,4 +1,7 @@
 (function () {
+	const FUNCTION_ENDPOINT = "/.netlify/functions/procesar";
+	const MAX_HISTORY_MESSAGES = 12;
+
 	function createChatMarkup() {
 		return `
 <section class="vitrum-chat is-hidden" id="vitrumChat" aria-label="Asistente IA Vitrum">
@@ -14,22 +17,31 @@
 </section>`;
 	}
 
-	function getQuickResponse(message) {
-		const text = message.toLowerCase();
+	async function sendMessageToAI(userMessage, history) {
+		const response = await fetch(FUNCTION_ENDPOINT, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				message: userMessage,
+				history: history,
+			}),
+		});
 
-		if (text.includes("precio") || text.includes("costo")) {
-			return "Podemos ayudarte con un presupuesto rapido. Indica medidas aproximadas y tipo de servicio.";
+		const data = await response.json().catch(function () {
+			return {};
+		});
+
+		if (!response.ok) {
+			throw new Error(data.error || "No se pudo obtener respuesta del asistente.");
 		}
 
-		if (text.includes("horario") || text.includes("atencion")) {
-			return "Nuestro equipo te responde por WhatsApp e Instagram. Si quieres, te comparto el acceso directo.";
+		if (!data.reply || typeof data.reply !== "string") {
+			throw new Error("La respuesta del asistente no es valida.");
 		}
 
-		if (text.includes("instalacion") || text.includes("instalar")) {
-			return "Si, realizamos instalacion completa y soporte para cada proyecto.";
-		}
-
-		return "Gracias por tu mensaje. Te orientamos en vidrio, aluminio y acero inoxidable para tu proyecto.";
+		return data.reply.trim();
 	}
 
 	function appendBubble(container, text, type) {
@@ -38,6 +50,7 @@
 		bubble.textContent = text;
 		container.appendChild(bubble);
 		container.scrollTop = container.scrollHeight;
+		return bubble;
 	}
 
 	function initVitrumChat() {
@@ -52,6 +65,7 @@
 		const form = document.getElementById("vitrumChatForm");
 		const input = document.getElementById("vitrumChatInput");
 		const messages = document.getElementById("vitrumChatMessages");
+		const conversation = [];
 
 		const openChat = function () {
 			chat.classList.remove("is-hidden");
@@ -85,7 +99,7 @@
 
 		closeButton.addEventListener("click", closeChat);
 
-		form.addEventListener("submit", function (event) {
+		form.addEventListener("submit", async function (event) {
 			event.preventDefault();
 			const userMessage = input.value.trim();
 			if (!userMessage) {
@@ -93,11 +107,37 @@
 			}
 
 			appendBubble(messages, userMessage, "user");
-			input.value = "";
+			conversation.push({ role: "user", content: userMessage });
+			if (conversation.length > MAX_HISTORY_MESSAGES) {
+				conversation.splice(0, conversation.length - MAX_HISTORY_MESSAGES);
+			}
 
-			setTimeout(function () {
-				appendBubble(messages, getQuickResponse(userMessage), "bot");
-			}, 350);
+			input.value = "";
+			input.disabled = true;
+			const sendButton = form.querySelector("button[type='submit']");
+			if (sendButton) {
+				sendButton.disabled = true;
+			}
+
+			const thinkingBubble = appendBubble(messages, "Escribiendo...", "bot");
+
+			try {
+				const assistantReply = await sendMessageToAI(userMessage, conversation);
+				thinkingBubble.textContent = assistantReply || "No recibi respuesta en este momento.";
+				conversation.push({ role: "assistant", content: thinkingBubble.textContent });
+				if (conversation.length > MAX_HISTORY_MESSAGES) {
+					conversation.splice(0, conversation.length - MAX_HISTORY_MESSAGES);
+				}
+			} catch (error) {
+				thinkingBubble.textContent = (error && error.message) || "No pude responder ahora. Intenta nuevamente en unos segundos.";
+			}
+
+			messages.scrollTop = messages.scrollHeight;
+			input.disabled = false;
+			if (sendButton) {
+				sendButton.disabled = false;
+			}
+			input.focus();
 		});
 
 		document.addEventListener("click", function (event) {
