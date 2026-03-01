@@ -4,14 +4,7 @@
 			return window.VITRUM_CHAT_ENDPOINT;
 		}
 
-		const hostname = (window.location && window.location.hostname) || "";
-		const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
-
-		if (isLocalHost) {
-			return "http://localhost:8888/.netlify/functions/procesar";
-		}
-
-		return "/.netlify/functions/procesar";
+		return "/api/procesar";
 	}
 
 	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
