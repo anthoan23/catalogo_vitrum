@@ -8,10 +8,10 @@
 		const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
 
 		if (isLocalHost) {
-			return "http://localhost:8888/api/procesar";
+			return "http://localhost:8888/.netlify/functions/procesar";
 		}
 
-		return "/api/procesar";
+		return "/.netlify/functions/procesar";
 	}
 
 	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
