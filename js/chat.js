@@ -5,13 +5,13 @@
 		}
 
 		const hostname = (window.location && window.location.hostname) || "";
-		const isNetlifyHost = hostname.includes("netlify.app") || hostname.includes("netlify.live");
+		const isLocalHost = hostname === "localhost" || hostname === "127.0.0.1" || hostname === "::1";
 
-		if (isNetlifyHost) {
-			return "/.netlify/functions/procesar";
+		if (isLocalHost) {
+			return "http://localhost:8888/.netlify/functions/procesar";
 		}
 
-		return "http://localhost:8888/.netlify/functions/procesar";
+		return "/.netlify/functions/procesar";
 	}
 
 	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
