@@ -1,5 +1,20 @@
 (function () {
-	const FUNCTION_ENDPOINT = "/.netlify/functions/procesar";
+	function resolveFunctionEndpoint() {
+		if (window.VITRUM_CHAT_ENDPOINT && typeof window.VITRUM_CHAT_ENDPOINT === "string") {
+			return window.VITRUM_CHAT_ENDPOINT;
+		}
+
+		const hostname = (window.location && window.location.hostname) || "";
+		const isNetlifyHost = hostname.includes("netlify.app") || hostname.includes("netlify.live");
+
+		if (isNetlifyHost) {
+			return "/.netlify/functions/procesar";
+		}
+
+		return "http://localhost:8888/.netlify/functions/procesar";
+	}
+
+	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
 	const MAX_HISTORY_MESSAGES = 12;
 
 	function createChatMarkup() {
@@ -34,6 +49,9 @@
 		});
 
 		if (!response.ok) {
+			if (response.status === 404) {
+				throw new Error("No se encontró la función del chat (404). Ejecuta Netlify en local con 'netlify dev' o despliega el sitio en Netlify.");
+			}
 			throw new Error(data.error || "No se pudo obtener respuesta del asistente.");
 		}
 
