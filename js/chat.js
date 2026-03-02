@@ -4,7 +4,7 @@
 			return window.VITRUM_CHAT_ENDPOINT;
 		}
 
-		return "/api/procesar";
+		return "/.netlify/functions/chat-ia";
 	}
 
 	const FUNCTION_ENDPOINT = resolveFunctionEndpoint();
@@ -43,7 +43,7 @@
 
 		if (!response.ok) {
 			if (response.status === 404) {
-				throw new Error("No se encontró la función del chat (404) en " + FUNCTION_ENDPOINT + ". Revisa que Netlify haya publicado la función 'procesar'.");
+				throw new Error("No se encontró la función del chat (404) en " + FUNCTION_ENDPOINT + ". Revisa que Netlify haya publicado la función 'chat-ia'.");
 			}
 			throw new Error(data.error || "No se pudo obtener respuesta del asistente.");
 		}
