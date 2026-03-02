@@ -3,3 +3,7 @@
 
 [functions]
   directory = "netlify/functions"
+  included_files = ["requirements.txt"]
+
+[functions.procesar]
+  runtime = "python"
