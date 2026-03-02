@@ -17,6 +17,20 @@
 	-webkit-backdrop-filter: blur(16px);
 }
 
+.vitrum-chat-overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.35);
+	backdrop-filter: blur(1px);
+	-webkit-backdrop-filter: blur(1px);
+	z-index: 9998;
+	pointer-events: auto;
+}
+
+.vitrum-chat-overlay.is-hidden {
+	display: none;
+}
+
 .vitrum-chat.is-hidden {
 	display: none;
 }
@@ -30,11 +44,29 @@
 	color: #f2f2f4;
 }
 
+.vitrum-chat__title-wrap {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 0;
+}
+
+.vitrum-chat__logo {
+	width: 24px;
+	height: 24px;
+	border-radius: 999px;
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
 .vitrum-chat__title {
 	margin: 0;
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: 0.2px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .vitrum-chat__close {
@@ -126,10 +158,81 @@
 }
 
 @media (max-width: 700px) {
+	body.vitrum-chat-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+	}
+
 	.vitrum-chat {
 		right: 10px;
-		bottom: 10px;
+		left: 10px;
+		top: 0;
+		bottom: auto;
 		width: calc(100vw - 20px);
-		height: 62vh;
+		height: 100vh;
+		height: 100svh;
+		height: 100dvh;
+		min-height: 100dvh;
+		max-width: calc(100vw - 20px);
+		border-radius: 0;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 0;
+	}
+
+	.vitrum-chat__header {
+		min-height: calc(env(safe-area-inset-top, 0px) + 92px);
+		padding: calc(env(safe-area-inset-top, 0px) + 18px) 16px 18px;
+		align-items: center;
+	}
+
+	.vitrum-chat__title-wrap {
+		max-width: calc(100% - 54px);
+		gap: 12px;
+		align-self: center;
+	}
+
+	.vitrum-chat__logo {
+		width: 34px;
+		height: 34px;
+	}
+
+	.vitrum-chat__title {
+		font-size: 18px;
+	}
+
+	.vitrum-chat__close {
+		width: 34px;
+		height: 34px;
+		font-size: 28px;
+	}
+
+	.vitrum-chat__messages {
+		padding: 14px 14px 16px;
+		gap: 10px;
+	}
+
+	.vitrum-chat__bubble {
+		font-size: 15px;
+		line-height: 1.45;
+		padding: 10px 12px;
+	}
+
+	.vitrum-chat__form {
+		position: sticky;
+		bottom: 0;
+		padding: 12px 12px calc(12px + env(safe-area-inset-bottom, 0px));
+		gap: 10px;
+	}
+
+	.vitrum-chat__input {
+		font-size: 15px;
+		padding: 10px 14px;
+	}
+
+	.vitrum-chat__send {
+		font-size: 14px;
+		padding: 10px 14px;
 	}
 }
