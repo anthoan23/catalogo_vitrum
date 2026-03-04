@@ -78,17 +78,27 @@ const galleryByServiceItem = {
 		"/assets/select/panoramica/panoramica2.jpg",
 		"/assets/select/panoramica/Lateral-2-Canales-A2949-1000x1000.jpg",
 	],
-	"cierre-ambiente|corredizas": [
+	"ventanas|proyectante": [
+		"/assets/select/proyectante/proyectante1.jpg",
+		"/assets/select/proyectante/99485dfbde9102c15bb77ba0bea971a9.jpg",
+		"/assets/select/proyectante/Casa Pequeña Con Jardín.jfif",
+	],
+	"cierre-ambiente|corredizas con marco": [
 		"/assets/select/corredizas-a/dfa5bae3-d986-4313-b259-858672a67525.jpeg",
 		"/assets/select/corredizas-a/2f3fbdf1-bd11-43c1-b6c3-e25f86a0e4b5.jpeg",
 		"/assets/select/corredizas-a/e02d93a8-9f5a-4048-acce-725463576035.jpeg",
+	],
+	"cierre-ambiente|corredizas sin marco": [
+		"/assets/select/corrediza-sin-marco/0f1f679e-1901-48be-9d6e-133b86b5a5d6.jpeg",
+		"/assets/select/corrediza-sin-marco/7a37804b-3ba5-4905-857f-2d6a4ad7a8ec.jpeg",
+		"/assets/select/corrediza-sin-marco/6cbbe62c-4ba7-460e-bcf5-39b05d7fb2b3.jpeg",
 	],
 	"cierre-ambiente|bancarias": [
 		"/assets/select/bancarias/bancaria2.jpeg",
 		"/assets/select/bancarias/bancaria1.jpeg",
 		"/assets/select/bancarias/bancaria3.jpg",
 	],
-	"cierre-ambiente|acordion": [
+	"cierre-ambiente|acordeon": [
 		"/assets/select/acordion-a/acordion1.jpeg",
 		"/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM (1).jpeg",
 		"/assets/select/acordion-a/WhatsApp Image 2026-02-05 at 2.27.38 PM.jpeg",
@@ -113,10 +123,10 @@ const galleryByServiceItem = {
 		"/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.23 PM (1).jpeg",
 		"/assets/select/batiente/WhatsApp Image 2026-02-05 at 2.26.24 PM.jpeg",
 	],
-	"puertas-bano|acordion": [
-		"/assets/select/acordion-b/acordion1.jpeg",
+	"puertas-bano|acordeon para bano": [
+		"/assets/select/acordion-b/Airbrush-IMAGE-ENHANCER-1772504968473-1772504968474.jpg",
 		"/assets/select/acordion-b/acordion.jpeg",
-		"/assets/select/acordion-b/acordion1.jpeg",
+		"/assets/select/acordion-b/Airbrush-IMAGE-ENHANCER-1772504882713-1772504882713.jpg",
 	],
 	"comercios|vitrinas": [
 		"/assets/select/vitrinas/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
@@ -145,7 +155,7 @@ const detailByServiceItem = {
 		description:
 			"El sistema Caroni combina perfilería robusta con líneas modernas para lograr una ventana elegante, funcional y de larga vida útil en hogares y comercios.",
 		advantages: [
-			"Excelente aislamiento frente a ruido exterior y cambios de temperatura.",
+			"Excelente aislamiento frente a ruido exterior",
 			"Perfilería resistente con buen desempeño en uso continuo.",
 			"Diseño versátil que se adapta a fachadas modernas y clásicas.",
 			"Mantenimiento rápido con limpieza simple de vidrio y perfiles.",
@@ -181,14 +191,34 @@ const detailByServiceItem = {
 			"Combinación equilibrada entre estética y funcionalidad.",
 		],
 	},
-	"cierre-ambiente|corredizas": {
+	"ventanas|proyectante": {
 		description:
-			"Las corredizas para cierre de ambiente permiten abrir grandes claros con deslizamiento suave y un acabado sobrio para espacios amplios.",
+			"La ventana Proyectante abre hacia afuera desde la parte superior, logrando ventilación constante con buen sellado y una estética limpia para fachadas modernas.",
+		advantages: [
+			"Ventila incluso con lluvia ligera gracias a su apertura protegida.",
+			"Mejora la seguridad al limitar la apertura completa hacia el exterior.",
+			"Favorece privacidad y entrada de aire natural en espacios interiores.",
+			"Sistema práctico, durable y fácil de mantener en uso diario.",
+		],
+	},
+	"cierre-ambiente|corredizas con marco": {
+		description:
+			"Las corredizas con marco para cierre de ambiente permiten abrir grandes claros con deslizamiento suave y un acabado sobrio para espacios amplios.",
 		advantages: [
 			"Ahorro de espacio al no requerir giro de hojas.",
 			"Deslizamiento fluido para aperturas amplias.",
 			"Mantiene la entrada de luz con separacion elegante.",
 			"Ideal para integrar o dividir areas segun necesidad.",
+		],
+	},
+	"cierre-ambiente|corredizas sin marco": {
+		description:
+			"Las corredizas sin marco ofrecen una estética minimalista con mayor protagonismo del vidrio, ideales para integrar ambientes con amplitud visual y paso de luz natural.",
+		advantages: [
+			"Vista más limpia y moderna al reducir perfiles visibles.",
+			"Mayor sensación de amplitud entre espacios conectados.",
+			"Deslizamiento cómodo para apertura y cierre diarios.",
+			"Aporta iluminación natural con un acabado elegante.",
 		],
 	},
 	"cierre-ambiente|bancarias": {
@@ -201,7 +231,7 @@ const detailByServiceItem = {
 			"Fácil mantenimiento en zonas comerciales.",
 		],
 	},
-	"cierre-ambiente|acordion": {
+	"cierre-ambiente|acordeon": {
 		description:
 			"El sistema acordeon ofrece flexibilidad para abrir o cerrar espacios rapidamente, con un plegado compacto y funcional.",
 		advantages: [
@@ -251,9 +281,9 @@ const detailByServiceItem = {
 			"Facil mantenimiento y limpieza diaria.",
 		],
 	},
-	"puertas-bano|acordion": {
+	"puertas-bano|acordeon para bano": {
 		description:
-			"Puerta acordeon para banos compactos, con paneles plegables que optimizan el espacio sin perder funcionalidad.",
+			"Puerta acordeon para baños compactos, con paneles plegables que optimizan el espacio sin perder funcionalidad.",
 		advantages: [
 			"Ideal para espacios reducidos.",
 			"Plegado sencillo para una apertura rapida.",
@@ -308,14 +338,16 @@ const detailImageByServiceItem = {
 	"ventanas|ecobel": "/assets/select/ecobel/ecobel.png",
 	"ventanas|belglass": "/assets/select/belglass/beglass1.jpg",
 	"ventanas|panoramica": "/assets/select/panoramica/panoramica2.jpg",
-	"cierre-ambiente|corredizas": "/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
+	"ventanas|proyectante": "/assets/select/proyectante/marco.jpg",
+	"cierre-ambiente|corredizas con marco": "/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
+	"cierre-ambiente|corredizas sin marco": "/assets/select/corrediza-sin-marco/sinmarco.jpeg",
 	"cierre-ambiente|bancarias": "/assets/select/bancarias/bancaria3.jpeg",
-	"cierre-ambiente|acordion": "/assets/select/acordion-a/acordion2.jpeg",
+	"cierre-ambiente|acordeon": "/assets/select/acordion-a/acordion2.jpeg",
 	"barandas|escalera": "/assets/select/escalera/escalera-2.jpeg",
 	"barandas|terraza": "/assets/select/terraza/terraza-2.jpeg",
 	"puertas-bano|spider": "/assets/select/spider/spider-1.jpeg",
 	"puertas-bano|batiente": "/assets/select/batiente/batiente-1.jpeg",
-	"puertas-bano|acordion": "/assets/select/acordion-b/acordion.jpeg",
+	"puertas-bano|acordeon para bano": "/assets/select/acordion-b/acordion1.jpeg",
 	"comercios|vitrinas": "/assets/select/vitrinas/vitrina.jpeg",
 	"comercios|mostradores": "/assets/select/mostradores/mostrador.jpeg",
 	"mas|espejos": "/assets/select/espejos/espejo-1.jpeg",

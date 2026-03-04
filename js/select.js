@@ -12,7 +12,7 @@ const normalizeService = (value) => {
 const serviceData = {
 	ventanas: {
 		title: "Ventanas",
-		subtitle: "Soluciones en vidrio y aluminio para iluminar, proteger y mejorar cada espacio con estilo moderno y alta durabilidad.",
+		subtitle: "Sistemas de alta gama en vidrio y aluminio. Diseñamos soluciones a medida que combinan estética moderna, seguridad y máxima durabilidad para sus espacios.",
 		image: "/assets/select/caroni/caroni-1.mov",
 		items: [
 			{
@@ -42,6 +42,13 @@ const serviceData = {
 				image: "/assets/select/panoramica/panoramica1.jpg",
 				materials: ["Aluminio"],
 				colors: ["Blanco", "Gris", "Negro"],
+			},
+			{
+				name: "Proyectante",
+				description: "Apertura superior para ventilar con seguridad y sin perder privacidad.",
+				image: "/assets/select/proyectante/proyectante1.jpg",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
 			}
 		]
 	},
@@ -51,11 +58,18 @@ const serviceData = {
 		image: "/assets/sidebar/cierre-inc.jpg",
 		items: [
 			{
-				name: "Corredizas",
+				name: "Corredizas con marco",
 				description: "Apertura suave y ahorro de espacio para grandes claros.",
 				image: "/assets/select/corredizas-a/5af1c677-2807-4a93-8365-4e743fcecbee.jpeg",
-				materials: ["Acero inoxidable", "Aluminio"],
+				materials: ["Aluminio"],
 				colors: ["Gris", "Negro", "Blanco"],
+			},
+			{
+				name: "Corredizas sin marco",
+				description: "Paneles de vidrio con visual limpia y apertura deslizante para espacios modernos.",
+				image: "/assets/select/corrediza-sin-marco/6cbbe62c-4ba7-460e-bcf5-39b05d7fb2b3.jpeg",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Bancarias",
@@ -65,7 +79,7 @@ const serviceData = {
 				colors: ["Gris", "Negro"],
 			},
 			{
-				name: "Acordion",
+				name: "Acordeón",
 				description: "Solucion flexible para dividir o integrar ambientes.",
 				image: "/assets/select/acordion-a/acordion1.jpeg",
 				materials: ["Acero inoxidable"],
@@ -82,14 +96,14 @@ const serviceData = {
 				name: "Escalera",
 				description: "Barandas seguras con diseno limpio para interiores.",
 				image: "/assets/select/escalera/escalera.jpeg",
-				materials: ["Acero"],
+				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			},
 			{
 				name: "Terraza",
 				description: "Proteccion exterior con vista despejada.",
 				image: "/assets/select/terraza/terraza1.jpeg",
-				materials: ["Acero"],
+				materials: ["Acero inoxidable"],
 				colors: ["Gris", "Negro"],
 			}
 		]
@@ -115,7 +129,7 @@ const serviceData = {
 			},
 			
 			{
-				name: "Acordion",
+				name: "Acordeón para baño",
 				description: "Paneles plegables para duchas compactas.",
 				image: "/assets/select/acordion-b/acordion1.jpeg",
 				materials: ["Acero inoxidable"],
@@ -132,14 +146,14 @@ const serviceData = {
 				name: "Vitrinas",
 				description: "Exhibicion clara para destacar tus productos.",
 				image: "/assets/select/vitrinas/34ea444a-c2a9-47e6-af2d-3b1db96e3cb6.jpeg",
-				materials: ["Acero"],
-				colors: ["Gris", "Blanco", "Negro"],
+				materials: ["Acero inoxidable"],
+				colors: ["Gris"],
 			},
 			{
 				name: "Mostradores",
 				description: "Superficies resistentes para atencion al cliente.",
 				image: "/assets/select/mostradores/mostrador.jpeg",
-				materials: ["Acero"],
+				materials: ["Acero inoxidable", "Aluminio"],
 				colors: ["Gris", "Blanco", "Negro"],
 			}
 		]

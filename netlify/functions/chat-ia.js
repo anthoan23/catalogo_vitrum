@@ -1,13 +1,362 @@
 const Groq = require("groq-sdk");
 
+const WHATSAPP_CONTACT = "https://wa.me/584145009225";
+
+const PRODUCT_CATALOG = [
+	{
+		service: "Ventanas",
+		items: [
+			{
+				name: "Caroni",
+				description: "Lineas modernas con alta resistencia y buen aislamiento.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"El sistema Caroni combina perfileria robusta con lineas modernas para lograr una ventana elegante, funcional y de larga vida util en hogares y comercios.",
+				advantages: [
+					"Excelente aislamiento frente a ruido exterior.",
+					"Perfileria resistente para uso continuo.",
+					"Diseno versatil para fachadas modernas y clasicas.",
+					"Mantenimiento rapido con limpieza simple.",
+				],
+			},
+			{
+				name: "Ecobel",
+				description: "Perfileria ligera ideal para espacios contemporaneos.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"Ecobel ofrece un perfil liviano y contemporaneo, ideal para proyectos que buscan iluminacion natural, estetica limpia y operacion comoda.",
+				advantages: [
+					"Mayor entrada de luz natural.",
+					"Deslizamiento suave y practico.",
+					"Acabado moderno minimalista.",
+					"Buena durabilidad en uso residencial.",
+				],
+			},
+			{
+				name: "Belglass",
+				description: "Acabados elegantes para proyectos residenciales y comerciales.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"Belglass esta pensado para proyectos que requieren presentacion elegante, cuidando la calidad visual del vidrio y la firmeza estructural.",
+				advantages: [
+					"Imagen premium para viviendas y comercios.",
+					"Estructura estable y segura.",
+					"Compatibilidad con distintos tonos de perfileria.",
+					"Facil integracion con disenos interiores.",
+				],
+			},
+			{
+				name: "Panoramica",
+				description: "Maxima visibilidad y entrada de luz natural.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"La linea Panoramica prioriza visuales abiertas y amplitud del espacio, permitiendo una conexion mas limpia entre interior y exterior.",
+				advantages: [
+					"Mayor campo visual.",
+					"Mas iluminacion natural.",
+					"Ideal para areas sociales y fachadas.",
+					"Balance entre estetica y funcionalidad.",
+				],
+			},
+			{
+				name: "Proyectante",
+				description: "Apertura superior para ventilar con seguridad y sin perder privacidad.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"La ventana Proyectante abre hacia afuera desde la parte superior, logrando ventilacion constante con buen sellado y estetica limpia.",
+				advantages: [
+					"Ventila incluso con lluvia ligera.",
+					"Mejora la seguridad al limitar apertura.",
+					"Favorece privacidad y aire natural.",
+					"Practica y durable en uso diario.",
+				],
+			},
+		],
+	},
+	{
+		service: "Puertas cierre de ambiente",
+		items: [
+			{
+				name: "Corredizas con marco",
+				description: "Apertura suave y ahorro de espacio para grandes claros.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Gris", "Negro"],
+				detailDescription:
+					"Las corredizas con marco permiten abrir grandes claros con deslizamiento suave y acabado sobrio para espacios amplios.",
+				advantages: [
+					"Ahorro de espacio.",
+					"Deslizamiento fluido.",
+					"Mantiene entrada de luz.",
+					"Ideal para integrar o dividir areas.",
+				],
+			},
+			{
+				name: "Corredizas sin marco",
+				description: "Paneles de vidrio con visual limpia y apertura deslizante para espacios modernos.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"Las corredizas sin marco ofrecen una estetica minimalista con mayor protagonismo del vidrio e integracion visual de ambientes.",
+				advantages: [
+					"Vista limpia y moderna.",
+					"Mayor sensacion de amplitud.",
+					"Deslizamiento comodo.",
+					"Aporta iluminacion natural.",
+				],
+			},
+			{
+				name: "Bancarias",
+				description: "Paneles robustos con enfoque en seguridad y durabilidad.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"Los sistemas bancarios priorizan seguridad y resistencia, con paneles firmes para zonas de alto flujo.",
+				advantages: [
+					"Alta robustez.",
+					"Perfiles fuertes para uso intensivo.",
+					"Control visual con transparencia.",
+					"Facil mantenimiento comercial.",
+				],
+			},
+			{
+				name: "Acordeon",
+				description: "Solucion flexible para dividir o integrar ambientes.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"El sistema acordeon ofrece flexibilidad para abrir o cerrar espacios rapidamente con plegado compacto y funcional.",
+				advantages: [
+					"Plegado compacto.",
+					"Apertura y cierre rapidos.",
+					"Aprovecha luz natural.",
+					"Ideal para espacios multiuso.",
+				],
+			},
+		],
+	},
+	{
+		service: "Baranda de vidrio",
+		items: [
+			{
+				name: "Escalera",
+				description: "Barandas seguras con diseno limpio para interiores.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"Barandas de escalera con vidrio y herrajes firmes para brindar seguridad sin perder ligereza visual.",
+				advantages: [
+					"Mejora seguridad en desniveles.",
+					"No bloquea la vista.",
+					"Herrajes resistentes.",
+					"Look moderno y elegante.",
+				],
+			},
+			{
+				name: "Terraza",
+				description: "Proteccion exterior con vista despejada.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"Barandas para terraza con vidrio templado y fijaciones estables para seguridad y transparencia en exteriores.",
+				advantages: [
+					"Proteccion segura en exteriores.",
+					"Resistencia a intemperie.",
+					"Vista sin obstrucciones.",
+					"Acabado sobrio.",
+				],
+			},
+		],
+	},
+	{
+		service: "Puertas de bano",
+		items: [
+			{
+				name: "Spider",
+				description: "Herrajes puntuales para un look minimalista.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"El sistema Spider utiliza herrajes puntuales para un resultado minimalista, con vidrio templado de alta calidad.",
+				advantages: [
+					"Look limpio con herrajes discretos.",
+					"Apertura estable.",
+					"Vidrio templado para seguridad.",
+					"Facil limpieza en ducha.",
+				],
+			},
+			{
+				name: "Batiente",
+				description: "Apertura tradicional con cierre firme y comodo.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"La puerta batiente ofrece apertura tradicional con cierre firme, ideal para duchas que requieren acceso directo.",
+				advantages: [
+					"Apertura amplia y comoda.",
+					"Cierre firme.",
+					"Herrajes resistentes a humedad.",
+					"Facil mantenimiento.",
+				],
+			},
+			{
+				name: "Acordeon para bano",
+				description: "Paneles plegables para duchas compactas.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris", "Negro"],
+				detailDescription:
+					"Puerta acordeon para banos compactos con paneles plegables que optimizan el espacio sin perder funcionalidad.",
+				advantages: [
+					"Ideal para espacios reducidos.",
+					"Plegado sencillo.",
+					"Reduce salpicaduras.",
+					"Solucion practica y economica.",
+				],
+			},
+		],
+	},
+	{
+		service: "Comercios",
+		items: [
+			{
+				name: "Vitrinas",
+				description: "Exhibicion clara para destacar tus productos.",
+				materials: ["Acero inoxidable"],
+				colors: ["Gris"],
+				detailDescription:
+					"Vitrinas en vidrio para exhibir productos con claridad, resaltando mercancia y cuidando seguridad.",
+				advantages: [
+					"Mayor visibilidad de productos.",
+					"Estructura estable.",
+					"Imagen profesional.",
+					"Facil limpieza.",
+				],
+			},
+			{
+				name: "Mostradores",
+				description: "Superficies resistentes para atencion al cliente.",
+				materials: ["Acero inoxidable", "Aluminio"],
+				colors: ["Gris", "Blanco", "Negro"],
+				detailDescription:
+					"Mostradores en vidrio con superficies resistentes pensadas para atencion al cliente y exhibicion ordenada.",
+				advantages: [
+					"Superficie firme para uso diario.",
+					"Mejora organizacion y atencion.",
+					"Acabado moderno.",
+					"Facil mantenimiento.",
+				],
+			},
+		],
+	},
+	{
+		service: "Mas",
+		items: [
+			{
+				name: "Espejos",
+				description: "Disenos personalizados para hogar o comercio.",
+				materials: ["LED Flexisbles"],
+				colors: ["Amarillo", "Blanco", "Azul"],
+				detailDescription:
+					"Espejos a medida con acabados limpios para ampliar visualmente los espacios y mejorar la iluminacion.",
+				advantages: [
+					"Amplia visualmente el ambiente.",
+					"Aporta mayor luminosidad.",
+					"Cortes y medidas personalizadas.",
+					"Facil limpieza.",
+				],
+			},
+			{
+				name: "Puertas de celosia",
+				description: "Puertas decorativas que combinan privacidad y estilo con disenos de celosia.",
+				materials: ["Aluminio"],
+				colors: ["Blanco", "Negro"],
+				detailDescription:
+					"Puertas de celosia con diseno decorativo para dar privacidad y ventilacion sin perder estilo.",
+				advantages: [
+					"Ventilacion controlada.",
+					"Privacidad con diseno atractivo.",
+					"Ligera y funcional para interiores.",
+					"Combina con estilos clasicos o modernos.",
+				],
+			},
+		],
+	},
+];
+
+const FREQUENT_QUESTIONS = [
+	{
+		question: "Cuanto demora una instalacion promedio?",
+		answer: "Depende del proyecto, pero la mayoria se completa entre 1 y 15 dias.",
+	},
+	{
+		question: "Con que tasa de dolar trabajan?",
+		answer:
+			"Los presupuestos se ajustan segun la forma de pago: tasa BCV para pagos en bolivares y un precio diferenciado para pagos en divisas en efectivo.",
+	},
+	{
+		question: "Hacen visitas para medir?",
+		answer: "Si, se coordina una visita para tomar medidas y asesorar al cliente.",
+	},
+	{
+		question: "Ofrecen garantia en los trabajos?",
+		answer: "Si, todos los proyectos incluyen garantia y soporte post venta a excepcion del vidrio.",
+	},
+	{
+		question: "Como puedo pedir un presupuesto?",
+		answer:
+			"Paso 1: escribir por WhatsApp para iniciar la solicitud. Paso 2: coordinar visita para tomar medidas exactas en el sitio. Paso 3: con esas medidas exactas se elabora y entrega el presupuesto final.",
+	},
+];
+
+function buildKnowledgeContext() {
+	const productLines = PRODUCT_CATALOG.map((group) => {
+		const items = group.items
+			.map(
+				(item) =>
+					`${item.name}: ${item.description} Materiales: ${item.materials.join(", ")}. Colores: ${
+						Array.isArray(item.colors) && item.colors.length ? item.colors.join(", ") : "No especificados"
+					}.`
+			)
+			.join(" ");
+		return `- ${group.service}: ${items}`;
+	}).join("\n");
+
+	const productDetailLines = PRODUCT_CATALOG.map((group) => {
+		const details = group.items
+			.map((item) => {
+				const advantages = Array.isArray(item.advantages)
+					? item.advantages.map((adv) => `- ${adv}`).join(" ")
+					: "- Sin ventajas especificadas.";
+				return `${group.service} > ${item.name}: ${item.detailDescription || item.description} Ventajas: ${advantages}`;
+			})
+			.join(" ");
+		return `- ${details}`;
+	}).join("\n");
+
+	const faqLines = FREQUENT_QUESTIONS.map(
+		(item) => `- ${item.question} Respuesta: ${item.answer}`
+	).join("\n");
+
+	return `CATALOGO_RESUMIDO_VITRUM:\n${productLines}\n\nCATALOGO_DETALLADO_VITRUM (usar cuando pidan mas detalle):\n${productDetailLines}\n\nPREGUNTAS_FRECUENTES_VITRUM:\n${faqLines}`;
+}
+
 const SYSTEM_PROMPT =
 	"Eres un asesor comercial y tecnico de la empresa Vitrum. " +
 	"Vitrum se especializa en la fabricacion e instalacion de ventanas, puertas y cierres " +
 	"en vidrio, acero y aluminio. " +
-	"Tu funcion es ayudar a las personas con cualquier duda sobre productos, materiales, " +
-	"tipos de apertura, mantenimiento, usos recomendados, tiempos estimados y proceso general de instalacion. " +
 	"Responde siempre en espanol, de forma clara, cordial y profesional. " +
-	"Si falta informacion para recomendar una opcion, haz preguntas breves para orientar mejor al cliente.";
+	"Usa esta base como herramienta: primero responde con catalogo resumido y, si el usuario pide detalles, usa catalogo detallado (descripcion amplia, ventajas, colores y materiales). " +
+	"Tu prioridad es responder usando EXCLUSIVAMENTE la informacion del catalogo y preguntas frecuentes incluidas abajo. " +
+	"Si el usuario pide presupuesto, explica siempre estos pasos: 1) contacto por WhatsApp, 2) coordinacion de visita para medir, 3) con medidas exactas se entrega presupuesto final. " +
+	"Si el usuario pregunta algo fuera de esa informacion o no tienes certeza, indicalo claramente y pide que se comunique por WhatsApp: " +
+	`${WHATSAPP_CONTACT}. ` +
+	"Cuando falte contexto para recomendar, haz maximo 2 preguntas breves. " +
+	"No inventes datos tecnicos, precios ni tiempos fuera de lo indicado.\n\n" +
+	buildKnowledgeContext();
 
 const MODEL_NAME = "meta-llama/llama-4-scout-17b-16e-instruct";
 
@@ -16,6 +365,7 @@ const DEFAULT_ALLOWED_ORIGINS = [
 	"http://localhost:3000",
 	"http://127.0.0.1:5500",
 	"http://localhost",
+	"https://vitrumgc.netlify.app",
 	"https://vitrum-gc.netlify.app",
 ];
 
@@ -33,11 +383,19 @@ function getAllowedOrigins() {
 		.map((item) => item.trim())
 		.filter(Boolean);
 
+	const netlifyRuntimeOrigins = [
+		process.env.URL,
+		process.env.DEPLOY_PRIME_URL,
+		process.env.DEPLOY_URL,
+	]
+		.map((item) => String(item || "").trim())
+		.filter(Boolean);
+
 	if (envOrigins.length > 0) {
-		return new Set(envOrigins);
+		return new Set([...envOrigins, ...netlifyRuntimeOrigins]);
 	}
 
-	return new Set(DEFAULT_ALLOWED_ORIGINS);
+	return new Set([...DEFAULT_ALLOWED_ORIGINS, ...netlifyRuntimeOrigins]);
 }
 
 function getHeader(event, headerName) {
