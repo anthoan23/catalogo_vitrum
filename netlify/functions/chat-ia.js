@@ -1,6 +1,6 @@
 const Groq = require("groq-sdk");
 
-const WHATSAPP_CONTACT = "https://wa.me/584145009225";
+const WHATSAPP_CONTACT = "04145009225";
 
 const PRODUCT_CATALOG = [
 	{
@@ -349,6 +349,9 @@ const SYSTEM_PROMPT =
 	"Vitrum se especializa en la fabricacion e instalacion de ventanas, puertas y cierres " +
 	"en vidrio, acero y aluminio. " +
 	"Responde siempre en espanol, de forma clara, cordial y profesional. " +
+	"Interpreta la informacion del catalogo y FAQ, no copies datos en bruto ni respuestas literales de los arreglos. " +
+	"Redacta una respuesta humana, precisa y directa. " +
+	"Cada respuesta debe tener maximo 500 caracteres. " +
 	"Usa esta base como herramienta: primero responde con catalogo resumido y, si el usuario pide detalles, usa catalogo detallado (descripcion amplia, ventajas, colores y materiales). " +
 	"Tu prioridad es responder usando EXCLUSIVAMENTE la informacion del catalogo y preguntas frecuentes incluidas abajo. " +
 	"Si el usuario pide presupuesto, explica siempre estos pasos: 1) contacto por WhatsApp, 2) coordinacion de visita para medir, 3) con medidas exactas se entrega presupuesto final. " +
@@ -372,6 +375,7 @@ const DEFAULT_ALLOWED_ORIGINS = [
 const MAX_MESSAGE_CHARS = Number(process.env.CHAT_MAX_MESSAGE_CHARS || 800);
 const MAX_HISTORY_MESSAGES = Number(process.env.CHAT_MAX_HISTORY_MESSAGES || 12);
 const MAX_HISTORY_ITEM_CHARS = Number(process.env.CHAT_MAX_HISTORY_ITEM_CHARS || 800);
+const MAX_REPLY_CHARS = Number(process.env.CHAT_MAX_REPLY_CHARS || 500);
 const RATE_LIMIT_WINDOW_MS = Number(process.env.CHAT_RATE_LIMIT_WINDOW_MS || 60000);
 const RATE_LIMIT_MAX_REQUESTS = Number(process.env.CHAT_RATE_LIMIT_MAX_REQUESTS || 20);
 
@@ -524,6 +528,32 @@ function buildMessages(userMessage, history) {
 	return messages;
 }
 
+function trimReply(reply, maxChars) {
+	const normalized = String(reply || "").replace(/\s+/g, " ").trim();
+	if (!normalized) {
+		return "";
+	}
+
+	if (normalized.length <= maxChars) {
+		return normalized;
+	}
+
+	const cutoff = normalized.slice(0, maxChars);
+	const lastBreak = Math.max(
+		cutoff.lastIndexOf("."),
+		cutoff.lastIndexOf(","),
+		cutoff.lastIndexOf(";"),
+		cutoff.lastIndexOf(":"),
+		cutoff.lastIndexOf(" ")
+	);
+
+	if (lastBreak > Math.floor(maxChars * 0.6)) {
+		return `${cutoff.slice(0, lastBreak).trim()}…`;
+	}
+
+	return `${cutoff.trim()}…`;
+}
+
 exports.handler = async function handler(event) {
 	const method = String(event && event.httpMethod ? event.httpMethod : "").toUpperCase();
 	const allowedOrigins = getAllowedOrigins();
@@ -610,7 +640,9 @@ exports.handler = async function handler(event) {
 				completion.choices[0].message.content) ||
 			"";
 
-		return response(200, { reply: assistantResponse }, corsHeaders);
+		const safeReply = trimReply(assistantResponse, MAX_REPLY_CHARS);
+
+		return response(200, { reply: safeReply }, corsHeaders);
 	} catch (error) {
 		return response(500, { error: "No se pudo procesar tu mensaje en este momento." }, corsHeaders);
 	}
